@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,300&display=swap');
+
+/* ------ GLOBAL PROPERTIES ------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-text: #e6e6e6;
+    --dark-text: #808080;
+
+    --white: #f5f5f5;
+    --black: #161616;
+
+    --primary: #63FFAE;
+    --red: #db462c;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.2rem;
+    scroll-behavior: smooth;
+}
+
+h3::selection, 
+h4::selection,
+p::selection,
+small::selection {
+    background: rgba(97, 255, 173, 0.4);
+}
+
+a,
+a:visited
+a:active {
+    color: var(--light-text);
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.hidden {
+    display: none!important;
+}
+
+/* ------ HERO SECTION ------ */
+
+.header-section {
+
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--light-text);
+
+    background: rgb(224,237,159);
+    background: linear-gradient(39deg, rgba(224,237,159,1) 0%, rgba(116,213,177,1) 28%, rgba(110,207,198,1) 44%, rgba(94,163,190,1) 63%, rgba(75,157,210,1) 85%, rgba(98,123,201,1) 100%);
+}
+
+.fa-cloud {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.header-section h3 {
+    font-weight: 300;
+
+    margin-bottom: 20px;
+}
+
+.header-section h3 a{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.473);
+}
+
+.header-section small {
+    font-weight: 300;
+    font-size: 0.7rem;
+
+    margin-bottom: 30px;
+}
+
+.header-btn {
+    padding: 10px 30px;
+    
+    background: none;
+    color: var(--light-text);
+    
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    
+    cursor: pointer;
+
+    transition: transform 150ms ease-in;
+}
+
+.vertical-line {
+    height: 40vh;
+    width: 1px;
+    background: var(--white);
+
+    margin-bottom: -40vh;
+}
+
+/* ------ SECTION GLOBAL PROPERTIES ------ */ 
+
+section {
+    padding: 100px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 100px;
+
+    background-color: var(--white);
+}
+
+section .description {
+    max-width: 400px;
+    padding: 0 15px;
+
+    color: var(--dark-text);
+}
+
+section .description h3 {
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+section .description p {
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+
+section .description hr {
+    width: 120px;
+    color: var(--light-text);
+    opacity: 0.3;
+
+    margin: 30px 0;
+}
+
+/* tablet and smaller */
+@media (max-width: 1050px) {
+    section {
+        flex-direction: column;
+    }
+
+    section .description {
+        max-width: 500px;
+    }
+}
+
+/* ------ SECTION 1 ------ */
+
+section .img {
+    padding: 0 15px;
+}
+
+section .img img{
+    height: auto;
+    width: 100%;
+
+    cursor: pointer;
+
+    transition: all 200ms ease-in-out;
+}
+
+section .img img:hover {
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+/* ------ SECTION 2 ------ */ 
+
+.section-2 {
+    background: rgb(127, 142, 145);
+    background: linear-gradient(180deg, rgba(125, 140, 145, 1) 0%, rgba(50, 60, 55, 1) 100%);
+
+    color: var(--light-text);
+}
+
+.section-2 .description h3{
+    color: var(--light-text);
+}
+
+.section-2 .description p {
+    color: var(--light-text);
+}
+
+section .icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section .icons .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+section .icons .col .icon {
+    width: 100px;
+    height: 100px;
+    padding: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+section .icons .col .icon:hover {
+    transform: scale(0.9);
+}
+
+section .icons .col i {
+    padding: 30px;
+    font-size: 1.5rem;
+}
+
+section .icons .col .icon::before {
+    content: '';
+
+    height: 80px;
+    width: 80px;
+    position: absolute;
+
+    border: 1px solid var(--white);
+    
+    transform: rotate(45deg);
+    transition: transform 150ms ease-out;
+}
+
+section .icons .col .icon:hover::before {
+    transform: rotate(0deg)
+}
+
+/* ------ SECTION 3 ------ */ 
+
+.section-3 {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 50px 15px;
+}
+
+.section-3 .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    max-width: 100%;
+}
+
+.section-3 .cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.section-3 .card {
+    max-width: 400px;
+
+    padding: 20px;
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    cursor: pointer;
+
+    transition: all 150ms ease-in-out;
+}
+
+.section-3 .card:hover {    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.section-3 .card h4, p {
+    color: var(--dark-text);
+    font-weight: 300;
+}
+
+.section-3 .card p {
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+.section-3 .card button {
+    padding: 10px 20px;
+    background: none;
+
+    color: var(--dark-text);
+
+    border: 1px solid var(--dark-text);
+    border-radius: 5px;
+    
+    cursor: pointer;
+}
+
+.section-3 .card button:hover {
+    background: var(--dark-text);
+    color: var(--light-text);
+    border: 1px solid var(--dark-text);
+}
+
+@media (max-width: 1050px) {
+    .section-3 .cards {
+        flex-direction: column;
+    }
+}
+
+/* ------ SECTION 4 ------ */
+
+.section-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 100px 20px;
+
+    color: var(--light-text);
+
+    background: rgb(127, 142, 145);
+    background: linear-gradient(180deg, rgba(125, 140, 145, 1) 0%, rgba(50, 60, 55, 1) 100%);
+}
+
+.section-4 h3 {
+    font-weight: 400;
+
+    margin-bottom: 20px;
+}
+
+.section-4 hr {
+    width: 120px;
+    height: 1x;
+    color: var(--light-text);
+    margin-bottom: 15px;
+}
+
+.section-4 small {
+    font-size: 0.7rem;
+    font-weight: 100;
+
+    margin-bottom: 20px;
+}
+
+.section-4 button {
+    padding: 10px 50px;
+    
+    color: var(--dark-text);
+    background: var(--white);
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: all 100ms ease-in-out;
+}
+
+.section-4 button:hover {
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+    transform: scale(0.95);
+}
+
+/* ------ SECTION 5 ------ */
+
+.section-5 {
+    padding: 120px 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--light-text);
+    font-weight: 100;
+    font-size: 0.7rem;
+
+    background: rgb(224,237,159);
+    background: linear-gradient(39deg, rgba(98,123,201,1)  0%, rgba(75,157,210,1)  28%, rgba(94,163,190,1) 44%, rgba(110,207,198,1) 63%, rgba(116,213,177,1)85%, rgba(224,237,159,1) 100%);
+}
+
+.section-5 .social-links {
+    display: flex;
+    gap: 20px;
+
+    color: var(--light-text);
+    
+    font-size: 1.2rem;
+    margin-bottom: 20px;    
+}
+
+.section-5 .social-links i {
+    opacity: 0.7;
+    cursor: pointer;
+    
+    transition: opacity 150ms ease-in-out;
+}
+
+.section-5 .social-links i:hover {
+    opacity: 1;
+}
+
+.section-5 .seperator {
+    height: 15px;
+    width: 1px;
+    margin: 0 10px;
+    
+    background-color: var(--light-text);
+}
+
+.section-5 .site-info {
+    display: flex;
+    align-items: center;
+}
+
+.section-5 .site-info .copyright-link a {
+    border-bottom: 1px dotted var(--light-text);
+}
+
+/* ------ PHOTO MODAL ------ */
+
+.photo-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: rgba(0, 0, 0, 0.5)
+}
+
+.photo-modal .photo-container {
+    background: var(--white);
+    padding: 50px 50px;
+
+    position: relative; 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    color: var(--dark-text);
+    font-size: 0.8rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+}
+
+.photo-modal .photo-container img{
+    width: 100%;
+}
+
+/* ------ SIGN UP MODAL ------ */
+
+.signup-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.5)
+}
+
+.signup-modal .signup-container {
+    background: var(--white);
+    padding: 100px 50px;
+
+    position: relative; 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+}
+
+.signup-modal .illustration img{ 
+    width: 150px;
+}
+
+.signup-modal form label {
+    font-size: 0.7rem;
+    color: var(--dark-text);
+}
+
+.signup-modal form input{
+    font-size: 0.7rem;
+    color: var(--dark-text);
+    
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    
+    padding: 5px 15px;
+    padding-right: 30px;
+}
+
+.signup-modal form input:focus {
+    box-shadow: 0 0 0px 2px var(--primary);
+    outline: none;
+}
+
+.signup-modal form .input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    position: relative;
+}
+
+.signup-modal form .input-container i {
+    position: absolute;
+    right: 10px;
+
+    font-size: 0.7rem;
+    color: var(--dark-text);
+}
+
+.signup-modal form button {
+    padding: 7px 30px;
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    color: var(--dark-text);
+
+    margin-top: 15px;
+
+    cursor: pointer;
+
+    transition: background 150ms ease-in-out;
+    transition: color 100ms ease-in-out;
+}
+
+.signup-modal form button:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.signup-modal form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* tablet and smaller*/
+@media (max-width: 1050px) {
+    .signup-modal .signup-container {
+        flex-direction: column;
+    }
+}
+
+/* MODAL CLOSE BTN */
+
+.fa-window-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: var(--red);
+    opacity: 0.7;
+    font-size: 1.2rem;
+
+    cursor: pointer;
+    transition: opacity 150ms ease-in;
+}
+
+.fa-window-close:hover {
+    opacity: 1;
+}
